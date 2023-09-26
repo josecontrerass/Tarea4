@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js" defer></script>
+</head>
+<body class="bg-gray-100" x-data="{contador: 0}">
+    <nav class="bg-violet-700 text-white py-3">
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-bold">Portafolio Personal</h1>
+          <ul class="flex space-x-4">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="ACerca.html">Acerca de</a></li>
+            <li><a href="Calculos.html">Cálculos Matemáticos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+    </nav>
+    <section class="container mx-auto text-2xl justify-between items-center text-center bg-violet-300 p-2 m-2">
+        <p>En esta sección se puede interactuar con un Contador: <span x-text="contador"></span></p>
+        <button class="bg-blue-500 mx-auto p-1 rounded-lg" @click="contador--">Disminuir</button>
+        <button class="bg-green-500 mx-auto p-1 rounded-lg" @click="contador++">Incrementar</button>
+    </section>
+    <section class="bg-gray-200" >
+        <p class="text-2xl">En esta seccion es posible calcular la diferencia de edad entre usted y el dueño de la pagina:</p>
+        <div x-data="{submitted: false, userAge: '', ownerAge: 22, miVariable: null }">
+            <div class="container mx-auto mt-4">
+                <div>
+                    <form id="edadform" x-on:submit.prevent="submitted = true" class="container mx-auto p-5 bg-white rounded mt-4">
+                        <div class="sm:col-span-4">
+                            <label for="userAge" class="block text-sm font-semibold leading-6 text-gray-900">Ingresa tu Edad:</label>
+                            <div class="mt-2">
+                                <div class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                                <input type="number" name="userAge" id="userAge" x-model="userAge" autocomplete="username" class="block rounded-lg flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6" placeholder="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex items-center justify-end gap-x-6">
+                            <button type="submit" class="rounded-md bg-violet-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Calcular diferencia de Edad</button>
+                        </div>
+                    </form>
+                    <div x-show="submitted" class="container mx-auto p-5 bg-white rounded mt-4">
+                        <h2 class="text-lg font-semibold mb-2">Con la información enviada:</h2>
+                        <h3 class="text-lg font-medium mx-auto p-4 bg-gray-400 rounded mt-4">La diferencia entre la edad del <strong>usuario</strong> y el <strong>dueño</strong> de la página es:  <span x-text="$el.querySelector('#userAge').value-22"></span></h3>                        
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-violet-200 text-white-50 font-monospace py-4">
+        <div class="container mx-auto text-center">
+        <p>&copy; 2023 Josefa Contreras. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

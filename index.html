@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js" defer></script>
+</head>
+<body x-data="{ showSection1: false, showSection2: false, showSection3: false, showCard: false }" class="bg-neutral-300">
+    <nav class="bg-pink-700 text-white py-3">
+        <div class="container mx-auto flex justify-between items-center">
+          <h1 class="text-2xl font-bold">Portafolio Personal</h1>
+          <ul class="flex space-x-4">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Galeria.html">Galería</a></li>
+            <li><a href="ACerca.html">Acerca de</a></li>
+            <li><a href="Calculos.html">Cálculos Matemáticos</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+
+          </ul>
+        </div>
+    </nav>   
+      <!-- Secciones de Información en Cuadrícula -->
+    <section class="mx-auto w-1/5 m-4 items-center justify-center">
+      <img src="img/20230827_165105.jpg" alt="perfil" class="border-4">
+      <p class="text-center text-lg text-gray-900 font-bold p-4">María Josefa Contreras Vergara</p>
+    </section>
+    <section class="py-4">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Sección 1 -->
+        <div class="bg-white rounded p-6 shadow">
+            <h2 class="text-lg font-semibold mb-4">Estudios</h2>
+            <p>Soy estudiante de cuarto año de Ingenieria Civil Industrial en la Universidad Adolfo Ibañez y estoy cursando un Plan de Doble Titulación con Informática.</p>
+        </div>
+        <!-- Sección 2 -->
+        <div class="bg-white rounded p-6 shadow">
+            <h2 class="text-lg font-semibold mb-4">Familia</h2>
+            <p>Tengo una hermana menor y nuestros padres son separados por lo que hemos vivido con mi mamá de pequeñas, pero nos llevamos muy bien con nuestro papá. Tenemos un perrito llamado Pedrito que vive junto a nosotras acá en Santiago.</p>
+        </div>
+        <!-- Sección 3 -->
+        <div class="bg-white rounded p-6 shadow">
+            <h2 class="text-lg font-semibold mb-4">¿De dónde soy?</h2>
+            <p>Soy "estudiante de región" (como le llaman aquí en Santiago) y vivo en Curicó, Región del Maule.</p>
+        </div>
+        </div>
+    </section> 
+    <footer class="bg-pink-200 text-white-50 font-monospace py-4">
+        <div class="container mx-auto text-center">
+          <p>&copy; 2023 Josefa Contreras. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
